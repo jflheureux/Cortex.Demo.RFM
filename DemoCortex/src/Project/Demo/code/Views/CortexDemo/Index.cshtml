@@ -26,7 +26,7 @@
     }
 }
 
-@using (Html.BeginForm("IdentifyByEmail", "Demo", FormMethod.Post, new {@class= "form-inline", style= "width:auto;float: left;" }))
+@using (Html.BeginForm("IdentifyByEmail", "CortexDemo", FormMethod.Post, new {@class= "form-inline", style= "width:auto;float: left;" }))
 {
 
     <div class="form-group mb-2">
@@ -37,7 +37,7 @@
 }
 
 <br />
-@using (Html.BeginForm("EndAll", "Demo", FormMethod.Post, new { @class = "form-inline", style = "margin-top: -25px; padding-left: 10px;" }))
+@using (Html.BeginForm("EndAll", "CortexDemo", FormMethod.Post, new { @class = "form-inline", style = "margin-top: -25px; padding-left: 10px;" }))
 {
 
     <button class="btn btn-primary" type="submit">End Session</button>

@@ -153,20 +153,20 @@
     <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Demo\Layout.cshtml" />
+    <Content Include="Views\CortexDemo\Layout.cshtml" />
     <Content Include="App_Config\Include\Project\Demo.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Views\Demo\Index.cshtml" />
-    <Content Include="Views\Demo\Demo.cshtml" />
-    <Content Include="Views\Demo\DemoVip.cshtml" />
+    <Content Include="Views\CortexDemo\Index.cshtml" />
+    <Content Include="Views\CortexDemo\Demo.cshtml" />
+    <Content Include="Views\CortexDemo\DemoVip.cshtml" />
     <None Include="Web.config">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ContactApiController.cs" />
-    <Compile Include="Controllers\DemoController.cs" />
+    <Compile Include="Controllers\CortexDemoController.cs" />
     <Compile Include="IoC\DemoServicesConfigurator.cs" />
     <Compile Include="IoC\ServiceCollectionExtensions.cs" />
     <Compile Include="Models\ParseDataResult.cs" />

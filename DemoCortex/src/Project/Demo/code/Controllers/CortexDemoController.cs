@@ -15,7 +15,7 @@ namespace Demo.Project.Demo.Controllers
         public string Email { get; set; }
     }
 
-    public class DemoController : Controller
+    public class CortexDemoController : Controller
     {
         // GET: Demo
         public ActionResult Index()
@@ -45,13 +45,13 @@ namespace Demo.Project.Demo.Controllers
                 Tracker.Current.EndVisit(clear != 0);
             }
             HttpContext.Session.Abandon();
-            return Redirect("/demo");
+            return Redirect("/login");
         }
 
         public ActionResult IdentifyByEmail(string email)
         {
             Tracker.Current.Session.IdentifyAs(XConnectService.IdentificationSourceEmail, email);
-            return Redirect("/demo");
+            return Redirect("/login");
         }
 
         public void RegisterTestPurchase(string email)
