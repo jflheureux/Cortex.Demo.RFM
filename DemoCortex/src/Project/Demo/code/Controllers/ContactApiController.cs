@@ -35,7 +35,7 @@ namespace Demo.Project.Demo.Controllers
                 foreach (var c in customers)
                 {
                     index++;
-                    var added = await purchaseService.Add(c, true);
+                    var added = await purchaseService.Add(c, false);
                     if (added)
                     {
                         Sitecore.Diagnostics.Log.Info($"Excel import: {index} from {count}: CustomerID={c.CustomerId}", this);
