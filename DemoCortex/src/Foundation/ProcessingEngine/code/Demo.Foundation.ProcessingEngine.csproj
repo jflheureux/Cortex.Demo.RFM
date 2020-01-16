@@ -137,31 +137,34 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <PackageReference Include="Sitecore.Analytics" Version="[9.1.0]" />
-        <PackageReference Include="Sitecore.Analytics.Core" Version="[9.1.0]" />
-        <PackageReference Include="Sitecore.Analytics.Model" Version="[9.1.0]" />
-        <PackageReference Include="Sitecore.Analytics.XConnect" Version="[9.1.0]" />
-        <PackageReference Include="Sitecore.ContentSearch" Version="[9.1.0]" />
-        <PackageReference Include="Sitecore.ContentSearch.Linq" Version="[9.1.0]" />
-        <PackageReference Include="Sitecore.ContentTesting.ML" Version="[9.1.0]" />
-        <PackageReference Include="Sitecore.ExperienceEditor" Version="[9.1.0]" />
-        <PackageReference Include="Sitecore.Framework.Conditions" Version="[3.1.0]" />
-        <PackageReference Include="Sitecore.Framework.Configuration.Extensions" Version="[5.2.0]" />
-        <PackageReference Include="Sitecore.Framework.Rules.Abstractions" Version="[3.2.0]" />
-        <PackageReference Include="Sitecore.Kernel" Version="[9.1.0]" />
-        <PackageReference Include="Sitecore.Marketing" Version="[9.1.0]" />
-        <PackageReference Include="Sitecore.Marketing.Core" Version="[9.1.0]" />
-        <PackageReference Include="Sitecore.Marketing.Search" Version="[9.1.0]" />
-        <PackageReference Include="Sitecore.Marketing.Taxonomy" Version="[9.1.0]" />
-        <PackageReference Include="Sitecore.Nexus.Licensing" Version="[9.0.171002]" />
-        <PackageReference Include="Sitecore.Processing.Common" Version="[9.1.0]" />
-        <PackageReference Include="Sitecore.Processing.Engine" Version="[9.1.0]" />
-        <PackageReference Include="Sitecore.Xdb.Configuration" Version="[9.1.0]" />
-        <PackageReference Include="Sitecore.XConnect" Version="[9.1.0]" />
-        <PackageReference Include="Sitecore.XConnect.Client" Version="[9.1.0]" />
-        <PackageReference Include="Sitecore.XConnect.Client.Configuration" Version="[9.1.0]" />
-        <PackageReference Include="Sitecore.XConnect.Collection.Model" Version="[9.1.0]" />
-        <PackageReference Include="Sitecore.XConnect.Segmentation.Predicates.Model" Version="[9.1.0]" />
+        <PackageReference Include="Sitecore.Analytics" Version="9.2.0" />
+        <PackageReference Include="Sitecore.Analytics.Core" Version="9.2.0" />
+        <PackageReference Include="Sitecore.Analytics.Model" Version="9.2.0" />
+        <PackageReference Include="Sitecore.Analytics.XConnect" Version="9.2.0" />
+        <PackageReference Include="Sitecore.ContentSearch" Version="9.2.0" />
+        <PackageReference Include="Sitecore.ContentSearch.Linq" Version="9.2.0" />
+        <PackageReference Include="Sitecore.ContentTesting.ML" Version="9.2.0" />
+        <PackageReference Include="Sitecore.ExperienceEditor" Version="9.2.0" />
+        <PackageReference Include="Sitecore.Framework.Conditions" Version="4.0.0" />
+        <PackageReference Include="Sitecore.Framework.Configuration.Extensions" Version="5.3.0" />
+        <PackageReference Include="Sitecore.Framework.Rules.Abstractions" Version="3.3.0" />
+        <PackageReference Include="Sitecore.Kernel" Version="9.2.0" />
+        <PackageReference Include="Sitecore.Marketing" Version="9.2.0" />
+        <PackageReference Include="Sitecore.Marketing.Core" Version="9.2.0" />
+        <PackageReference Include="Sitecore.Marketing.Search" Version="9.2.0" />
+        <PackageReference Include="Sitecore.Marketing.Taxonomy" Version="9.2.0" />
+        <PackageReference Include="Sitecore.Nexus.Licensing" Version="9.0.180604">
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+          <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="Sitecore.Processing.Common" Version="9.2.0" />
+        <PackageReference Include="Sitecore.Processing.Engine" Version="9.2.0" />
+        <PackageReference Include="Sitecore.Xdb.Configuration" Version="9.2.0" />
+        <PackageReference Include="Sitecore.XConnect" Version="9.2.0" />
+        <PackageReference Include="Sitecore.XConnect.Client" Version="9.2.0" />
+        <PackageReference Include="Sitecore.XConnect.Client.Configuration" Version="9.2.0" />
+        <PackageReference Include="Sitecore.XConnect.Collection.Model" Version="9.2.0" />
+        <PackageReference Include="Sitecore.XConnect.Segmentation.Predicates.Model" Version="9.2.0" />
       </ItemGroup>
     </Otherwise>
   </Choose>
