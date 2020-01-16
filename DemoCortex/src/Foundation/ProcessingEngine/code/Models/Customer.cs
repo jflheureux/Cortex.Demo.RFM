@@ -8,7 +8,7 @@ namespace Demo.Foundation.ProcessingEngine.Models
         {
             Invoices = new List<PurchaseInvoice>();
         }
-        public int CustomerId { get; set; }
+        public string CustomerId { get; set; }
         public IList<PurchaseInvoice> Invoices { get; set; }
     }
 }

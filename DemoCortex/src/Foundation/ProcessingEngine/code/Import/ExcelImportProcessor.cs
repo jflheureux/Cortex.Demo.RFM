@@ -32,9 +32,11 @@ namespace Demo.Foundation.ProcessingEngine.Import
             {
                 if (!string.IsNullOrEmpty(data.Key))
                 {
-                    int customerId = int.Parse(data.Key);
-                    if (customerId <= 0)
+                    string customerId = data.Key;
+                    if (string.IsNullOrEmpty(customerId))
+                    {
                         continue;
+                    }
 
                     Customer customer = new Customer
                     {

@@ -37,7 +37,7 @@ namespace Demo.Foundation.ProcessingEngine.Mappers
             var customerId = dataRow.Schema.Fields.FirstOrDefault(x => x.Name == nameof(PurchaseOutcome.CustomerId));
             if (customerId != null)
             {
-                result.ContactId = (int) dataRow.GetInt64(dataRow.Schema.GetFieldIndex(nameof(PurchaseOutcome.CustomerId)));
+                result.ContactId = dataRow.GetString(dataRow.Schema.GetFieldIndex(nameof(PurchaseOutcome.CustomerId)));
             }
             var invoiceId = dataRow.Schema.Fields.FirstOrDefault(x => x.Name == nameof(PurchaseOutcome.InvoiceId));
             if (invoiceId != null)

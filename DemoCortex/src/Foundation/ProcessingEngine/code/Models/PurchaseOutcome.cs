@@ -9,13 +9,13 @@ namespace Demo.Foundation.ProcessingEngine.Models
         public int Quantity { get; set; }
         public int InvoiceId { get; set; }
 
-        public int CustomerId { get; set; }
+        public string CustomerId { get; set; }
 
         public double UnitPrice { get; set; }
 
         public string ProductId { get; set; }
 
-        public PurchaseOutcome(Guid definitionId, DateTime timestamp, string currencyCode, decimal monetaryValue, int invoiceId, int quantity, int customerId, string stockCode) : base(definitionId, timestamp, currencyCode, monetaryValue)
+        public PurchaseOutcome(Guid definitionId, DateTime timestamp, string currencyCode, decimal monetaryValue, int invoiceId, int quantity, string customerId, string stockCode) : base(definitionId, timestamp, currencyCode, monetaryValue)
         {
             this.Quantity = quantity;
             this.CustomerId = customerId;

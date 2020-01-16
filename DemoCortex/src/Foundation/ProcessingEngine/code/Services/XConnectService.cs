@@ -15,7 +15,7 @@ namespace Demo.Foundation.ProcessingEngine.Services
 {
     public class XConnectService
     {
-        public static string IdentificationSource => "demo";
+        public static string IdentificationSource => "CommerceUser";
         public static string IdentificationSourceEmail => "demo_email";
 
         static readonly ID CountryFolder = new ID("{DBE138C0-160F-4540-9868-0098E2CE8174}");
@@ -96,8 +96,7 @@ namespace Demo.Foundation.ProcessingEngine.Services
             {
                 try
                 {
-
-                    IdentifiedContactReference reference = new IdentifiedContactReference(IdentificationSource, purchase.CustomerId.ToString());
+                    IdentifiedContactReference reference = new IdentifiedContactReference(IdentificationSource, purchase.CustomerId);
                     var customer = await client.GetAsync(
                         reference,
                         new ContactExpandOptions(
@@ -115,20 +114,32 @@ namespace Demo.Foundation.ProcessingEngine.Services
                         }
                     );
 
+                    string email = "";
+                    int indexOfBackslashInCustomerId = purchase.CustomerId.IndexOf('\\');
+                    if (indexOfBackslashInCustomerId >= 0)
+                    {
+                        email = purchase.CustomerId.Substring(indexOfBackslashInCustomerId + 1);
+                    }
+                    else
+                    {
+                        email = "demo" + purchase.CustomerId + "@gmail.com";
+                    }
+
                     if (customer == null)
                     {
-                        var email = "demo" + Guid.NewGuid().ToString("N") + "@gmail.com";
-
-                        customer = new Contact(new ContactIdentifier(IdentificationSource, purchase.CustomerId.ToString(), ContactIdentifierType.Known));
+                        customer = new Contact(new ContactIdentifier(IdentificationSource, purchase.CustomerId, ContactIdentifierType.Known));
 
                         var preferredEmail = new EmailAddress(email, true);
                         var emails = new EmailAddressList(preferredEmail, "Work");
 
                         client.AddContact(customer);
                         client.SetEmails(customer, emails);
+                        client.Submit();
+                    }
 
+                    if (customer.Identifiers.All(identifier => identifier.Source != IdentificationSourceEmail))
+                    {
                         var identifierEmail = new ContactIdentifier(IdentificationSourceEmail, email, ContactIdentifierType.Known);
-                        
                         client.AddContactIdentifier(customer, identifierEmail);
                         client.Submit();
                     }

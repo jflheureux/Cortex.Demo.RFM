@@ -12,7 +12,7 @@ namespace Demo.Foundation.ProcessingEngine.Processors
         {
             var quantity = int.Parse(entity.CustomValues["Quantity"] as string);
             var invoiceId = int.Parse(entity.CustomValues["InvoiceId"] as string);
-            var contactId = int.Parse(entity.CustomValues["CustomerId"] as string);
+            var contactId = entity.CustomValues["CustomerId"] as string;
             var stockCode = entity.CustomValues["StockCode"] as string;
 
             var purchase = new PurchaseOutcome(PurchaseOutcome.PurchaseEventDefinitionId, entity.Timestamp,  entity.CurrencyCode, entity.MonetaryValue,invoiceId,quantity, contactId, stockCode);

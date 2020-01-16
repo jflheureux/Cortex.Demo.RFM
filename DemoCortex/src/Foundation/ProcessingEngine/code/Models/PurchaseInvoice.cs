@@ -8,7 +8,7 @@ namespace Demo.Foundation.ProcessingEngine.Models
         public int Quantity { get; set; }
         public string Currency { get; set; }
         public int Number { get; set; }
-        public int ContactId { get; set; }
+        public string ContactId { get; set; }
         public DateTime TimeStamp { get; set; }
         public string Country { get; set; }
         public string StockCode { get; set; }
